@@ -14,7 +14,7 @@ response - RestClient.post(
 }.to_json,
 :content_type => :json,
 :accept => :json
-) {[response, request, result| response }
+) {|response, request, result| response }
 if(response.code == 200)
 puts "Done!'#{targeturi}/index.php?p=#{postid}'"
 else
